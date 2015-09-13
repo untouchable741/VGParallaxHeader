@@ -373,7 +373,8 @@ static void *VGParallaxHeaderObserverContext = &VGParallaxHeaderObserverContext;
     [self.contentView autoSetDimension:ALDimensionHeight
                                 toSize:self.originalHeight];
     
-    self.insetAwarePositionConstraint = [self.contentView autoAlignAxis:ALAxisHorizontal
+    ALAxis alignAxis = self.mode == VGParallaxHeaderModeNone ? ALAxisBaseline : ALAxisHorizontal;
+    self.insetAwarePositionConstraint = [self.contentView autoAlignAxis:alignAxis
                                                        toSameAxisOfView:self.containerView
                                                              withOffset:round(self.originalTopInset/2)];
 }

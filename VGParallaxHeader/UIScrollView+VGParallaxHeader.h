@@ -12,6 +12,7 @@ typedef NS_ENUM(NSInteger, VGParallaxHeaderMode) {
     VGParallaxHeaderModeFill,
     VGParallaxHeaderModeTop,
     VGParallaxHeaderModeTopFill,
+    VGParallaxHeaderModeNone
 };
 
 typedef NS_ENUM(NSInteger, VGParallaxHeaderStickyViewPosition) {
